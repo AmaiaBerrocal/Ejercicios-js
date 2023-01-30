@@ -2,7 +2,7 @@ const inputPeso = document.querySelector("#peso");
 const inputAltura = document.querySelector("#altura");
 const button = document.querySelector(".btn");
 
-button.addEventListener("click", calcular);
+button.addEventListener("click", rango);
 
 const divResultado = document.querySelector("#div-resultado");
 
@@ -11,9 +11,36 @@ function calcular() {
     let peso = parseFloat(inputPeso.value);
     let altura = parseFloat(inputAltura.value); 
 
-    let resultado = peso/(altura*altura);
-    let texto = document.createTextNode(resultado);
-
-    divResultado.innerHTML = texto;
+    return peso/(altura*altura);
+    
 }
 
+function rango(){
+    let resultado = "";
+
+    let valor = calcular();
+    console.log(valor);
+
+    switch(true){
+        case (valor < 18.5):
+        resultado = `${valor} : Insuficiencia ponderal`;
+
+        console.log(resultado);
+        break;
+
+        case (valor >= 18.5 && valor <= 24.9):
+        resultado = `${valor} : Intervalo normal`;
+        console.log(resultado);
+        break;
+
+        case (valor > 24.9):
+        resultado = `${valor} : Sobrepeso`;
+        console.log(resultado);
+        break;
+    }
+    
+    let texto = document.createTextNode(resultado);
+    let parrafo = document.createElement("p");
+    parrafo.appendChild(texto);
+    divResultado.appendChild(parrafo);
+}
