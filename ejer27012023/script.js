@@ -3,21 +3,14 @@ const inputAltura = document.querySelector("#altura");
 const button = document.querySelector(".btn");
 
 button.addEventListener("click", rango);
-// button.addEventListener("click", (e) => {
-//     console.log(e);
-
-// });
-
 
 const pResultado = document.querySelector("#p-resultado");
-
 
 function calcular() {
     let peso = parseFloat(inputPeso.value);
     let altura = parseFloat(inputAltura.value); 
 
-    return (peso/(altura*altura)).toFixed(2);
-    
+    return (peso/(altura*altura)).toFixed(2);  
 }
 
 function rango(){
