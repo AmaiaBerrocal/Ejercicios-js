@@ -9,7 +9,7 @@ button.addEventListener("click", rango);
 // });
 
 
-const divResultado = document.querySelector("#div-resultado");
+const pResultado = document.querySelector("#p-resultado");
 
 
 function calcular() {
@@ -44,8 +44,5 @@ function rango(){
         break;
     }
     
-    let texto = document.createTextNode(resultado);
-    let parrafo = document.createElement("p");
-    parrafo.appendChild(texto);
-    divResultado.appendChild(parrafo);
+    pResultado.innerHTML = resultado;
 }
