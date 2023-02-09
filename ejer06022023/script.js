@@ -60,8 +60,12 @@ btnu.addEventListener("click", ()=>{
 
 function print(vocal) {
     let valor = texto.value;
-    let valor2 =  valor.replace(/a|e|i|o|u|á|é|í|ó|ú/gi, vocal);
-    parf.innerHTML = valor2;
+    if((valor=== "")  || (valor.length > 300)) {
+        alert("Introduce un texto de entre 0 y 300 caracteres.")
+    } else {
+        let valor2 =  valor.replace(/a|e|i|o|u|á|é|í|ó|ú/gi, vocal);
+        parf.innerHTML = valor2;
+    }
 }
 
 
