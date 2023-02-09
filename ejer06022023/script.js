@@ -21,7 +21,6 @@
 
 // console.log(reemplazaVocal("e"));
 
-
 // function reemplazaVocal(vocal){
 //     let valorTexto = input.value;
 //     return valorTexto.replace(/a|e|i|o|u|á|é|í|ó|ú/gi, vocal);
@@ -38,25 +37,11 @@ let btnu = document.getElementById("btnu");
 
 let parf = document.getElementById("parrafo");
 
-btna.addEventListener("click", ()=>{
-    print("a")
-});
-
-btne.addEventListener("click", ()=>{
-    print("e")
-});
-
-btni.addEventListener("click", ()=>{
-    print("i")
-});
-
-btno.addEventListener("click", ()=>{
-    print("o")
-});
-
-btnu.addEventListener("click", ()=>{
-    print("u")
-});
+btna.addEventListener("click", ()=>{ print("a") });
+btne.addEventListener("click", ()=>{ print("e") });
+btni.addEventListener("click", ()=>{ print("i") });
+btno.addEventListener("click", ()=>{ print("o") });
+btnu.addEventListener("click", ()=>{ print("u") });
 
 function print(vocal) {
     let valor = texto.value;
